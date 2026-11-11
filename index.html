@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b19">
+<meta name="description" content="Roots: Historia en Ruta, un minijuego móvil de símbolos con progreso guardado en este dispositivo.">
+<title>Roots · Historia en Ruta</title>
+<style>
+:root{color-scheme:dark;--bg:#080b19;--panel:#11182b;--panel2:#15152d;--line:#293450;--text:#f5f7ff;--muted:#b3bfd4;--cyan:#38dcf5;--pink:#f04fbd;--gold:#ffc65a;--lime:#baf36e;--purple:#9c7aff;--safe:env(safe-area-inset-bottom,0px)}*{box-sizing:border-box}html{min-height:100%;background:var(--bg)}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -20%,#1c3150 0,transparent 52%),linear-gradient(160deg,#080b19,#0d1021 70%,#080b19);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button{font:inherit;color:inherit}.wrap{max-width:960px;margin:auto;padding:18px 16px calc(30px + var(--safe))}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 2px 16px}.brand{font-size:.8rem;font-weight:900;letter-spacing:.13em;color:#e4eaff}.save-indicator{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.78rem}.dot{width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px #baf36e80}.hero{position:relative;overflow:hidden;border:1px solid #33415d;border-radius:28px;padding:clamp(22px,6vw,48px);background:linear-gradient(110deg,#11182b 0%,#10172bdf 52%,#12132b 100%);box-shadow:0 18px 70px #0005}.hero:after{content:"✦";position:absolute;font-size:clamp(130px,26vw,250px);right:7%;top:-28%;color:#26356440;pointer-events:none}.eyebrow{color:var(--cyan);font-size:.78rem;font-weight:850;letter-spacing:.16em;text-transform:uppercase}.hero h1{font-size:clamp(2.35rem,9vw,5rem);line-height:.98;letter-spacing:-.055em;margin:15px 0 14px;max-width:670px}.hero h1 span{color:var(--gold)}.hero p{max-width:650px;color:var(--muted);font-size:clamp(1rem,3.2vw,1.2rem);line-height:1.55;margin:0}.notice{display:inline-flex;align-items:center;gap:9px;margin-top:22px;padding:10px 13px;border:1px solid #40506d;border-radius:12px;background:#080d1d99;font-size:.84rem;color:#e8edfb}.notice b{color:var(--lime)}.layout{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:16px}.card{border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#131b31,#101426);padding:clamp(18px,4vw,28px);box-shadow:0 12px 32px #0003}.card h2{font-size:1.15rem;margin:0 0 8px}.hint{color:var(--muted);font-size:.9rem;line-height:1.5;margin:0}.machine{display:flex;justify-content:center;gap:clamp(8px,3vw,18px);margin:23px 0 19px}.reel{width:min(25vw,112px);height:min(28vw,124px);min-width:76px;min-height:84px;display:grid;place-items:center;border:1px solid #5c4c91;border-radius:20px;background:radial-gradient(circle at 50% 25%,#2b2450,#12172c 70%);font-size:clamp(2.5rem,10vw,4rem);box-shadow:inset 0 0 24px #9c7aff24,0 8px 22px #0004;transition:transform .16s,border-color .16s}.reel.pop{transform:translateY(-5px) scale(1.04);border-color:var(--gold)}.actions{display:flex;gap:10px;align-items:stretch}.primary,.secondary{min-height:52px;border-radius:14px;border:0;padding:12px 18px;font-weight:850;cursor:pointer;touch-action:manipulation}.primary{flex:1;background:linear-gradient(100deg,#26cfe9,#52e2e8);color:#07121c;box-shadow:0 8px 24px #35d9f533}.primary:active,.secondary:active{transform:scale(.98)}.primary:disabled{opacity:.65;cursor:wait}.secondary{background:#212941;border:1px solid #36425d;color:#e6ebf7}.status{min-height:28px;margin-top:12px;color:var(--gold);font-size:.9rem;font-weight:750;text-align:center}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:17px}.stat{padding:15px;border:1px solid #2b3650;border-radius:16px;background:#0b1020}.stat span{display:block;color:var(--muted);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}.stat strong{display:block;margin-top:5px;color:var(--cyan);font-size:1.55rem}.story-card{margin-top:16px}.story-list{display:grid;gap:10px;margin-top:16px}.story{display:flex;gap:12px;align-items:center;padding:12px;border:1px solid #28344d;border-radius:14px;background:#0d1222}.story-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:#24213d;font-size:1.35rem}.story.done{border-color:#438f83;background:#0d211f}.story.done .story-icon{background:#153e36}.story b{display:block;font-size:.88rem}.story small{color:var(--muted);font-size:.76rem}.story.locked{opacity:.58}.storage-note{margin-top:16px;padding:14px 16px;border-radius:16px;border:1px solid #3d3858;background:#17162a;color:#c7c9df;font-size:.82rem;line-height:1.5}.storage-note strong{color:#e6d9ff}.foot{margin:18px 4px 0;color:#8997b4;font-size:.75rem;line-height:1.5;text-align:center}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0} @media(max-width:700px){.wrap{padding:12px 12px calc(22px + var(--safe))}.top{margin-bottom:12px}.hero{border-radius:22px}.layout{grid-template-columns:1fr}.card{border-radius:20px}.hero:after{right:-2%;top:-10%}.story-card{margin-top:0}.save-indicator{font-size:.7rem}}@media(max-width:360px){.actions{flex-direction:column}.secondary{min-height:46px}.save-indicator{max-width:125px;text-align:right}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top"><div class="brand">AD | ELJAUNSI | $</div><div class="save-indicator" aria-live="polite"><i class="dot" aria-hidden="true"></i><span id="saveLabel">Guardado en este dispositivo</span></div></div>
+  <section class="hero" aria-labelledby="title">
+    <div class="eyebrow">MINIJUEGO · ROOTS</div>
+    <h1 id="title">Historia <span>en Ruta</span></h1>
+    <p>Cada giro abre una combinación de símbolos. Encuentra tríos para descubrir fragmentos de una historia y conservar tu avance en este dispositivo.</p>
+    <div class="notice"><b>PROTOTIPO</b><span>Solo puntos ficticios · sin apuestas ni dinero real</span></div>
+  </section>
+  <div class="layout">
+    <section class="card" aria-labelledby="playTitle">
+      <h2 id="playTitle">Gira y descubre</h2><p class="hint">Toca el botón para jugar una ronda. Los puntos y fragmentos se guardan automáticamente.</p>
+      <div class="machine" aria-label="Tres rodillos del minijuego"><div class="reel" id="r1" aria-label="Símbolo 1">🌱</div><div class="reel" id="r2" aria-label="Símbolo 2">🧭</div><div class="reel" id="r3" aria-label="Símbolo 3">📖</div></div>
+      <div class="actions"><button class="primary" id="play" type="button">Jugar ronda</button><button class="secondary" id="reset" type="button" aria-label="Borrar progreso guardado">Reiniciar</button></div>
+      <div class="status" id="status" role="status" aria-live="polite">Tu aventura está lista.</div>
+      <div class="stats"><div class="stat"><span>Puntos</span><strong id="score">0</strong></div><div class="stat"><span>Mejor</span><strong id="best">0</strong></div><div class="stat"><span>Rondas</span><strong id="rounds">0</strong></div><div class="stat"><span>Historias</span><strong id="storiesCount">0/4</strong></div></div>
+    </section>
+    <section class="card story-card" aria-labelledby="storyTitle"><h2 id="storyTitle">Fragmentos de Roots</h2><p class="hint">Un trío desbloquea el siguiente fragmento. Tu colección queda en este navegador.</p>
+      <div class="story-list" id="storyList"></div>
+      <div class="storage-note"><strong>Cómo se guarda:</strong> el progreso se actualiza al jugar y cada minuto en el almacenamiento local del navegador. Es privado de este dispositivo y navegador; no se sincroniza automáticamente con otros equipos.</div>
+    </section>
+  </div>
+  <p class="foot">Demostración creativa de AD | ELJAUNSI | $. Los puntos no tienen valor en efectivo ni pueden transferirse.</p>
+</main>
+<script>
+(() => {
+  'use strict';
+  const KEY = 'eljaunsi.roots.historia-en-ruta.v1';
+  const icons = ['🌱','🧭','📖','🍃','✨','🪴'];
+  const fragments = [
+    {icon:'🌱', title:'La semilla', text:'Una idea pequeña encuentra dónde echar raíces.'},
+    {icon:'🧭', title:'La ruta', text:'Cada camino conecta una nueva posibilidad.'},
+    {icon:'📖', title:'La historia', text:'Tus descubrimientos forman una aventura propia.'},
+    {icon:'🌳', title:'El bosque', text:'Las ideas crecen y se convierten en mundos.'}
+  ];
+  const fresh = () => ({version:1, score:0, best:0, rounds:0, unlocked:0, updatedAt:null});
+  let state = fresh();
+  const $ = id => document.getElementById(id);
+  function load(){
+    try {
+      const raw = localStorage.getItem(KEY);
+      if(!raw) return;
+      const saved = JSON.parse(raw);
+      if(saved && saved.version === 1){
+        state.score = Math.max(0, Number(saved.score) || 0);
+        state.best = Math.max(state.score, Number(saved.best) || 0);
+        state.rounds = Math.max(0, Number(saved.rounds) || 0);
+        state.unlocked = Math.min(fragments.length, Math.max(0, Number(saved.unlocked) || 0));
+        state.updatedAt = typeof saved.updatedAt === 'string' ? saved.updatedAt : null;
+      }
+    } catch(e) { $('saveLabel').textContent = 'Almacenamiento no disponible'; }
+  }
+  function persist(label='Guardado en este dispositivo'){
+    try {
+      state.updatedAt = new Date().toISOString();
+      localStorage.setItem(KEY, JSON.stringify(state));
+      $('saveLabel').textContent = label;
+    } catch(e) { $('saveLabel').textContent = 'No se pudo guardar'; }
+  }
+  function draw(){
+    $('score').textContent = state.score;
+    $('best').textContent = state.best;
+    $('rounds').textContent = state.rounds;
+    $('storiesCount').textContent = state.unlocked + '/' + fragments.length;
+    $('storyList').replaceChildren(...fragments.map((f,i)=>{
+      const row=document.createElement('div');
+      row.className='story '+(i<state.unlocked?'done':'locked');
+      const icon=document.createElement('div'); icon.className='story-icon'; icon.textContent=i<state.unlocked?f.icon:'🔒'; icon.setAttribute('aria-hidden','true');
+      const copy=document.createElement('div'); const title=document.createElement('b'); title.textContent=i<state.unlocked?f.title:'Fragmento por descubrir';
+      const desc=document.createElement('small'); desc.textContent=i<state.unlocked?f.text:'Consigue un trío para revelarlo.'; copy.append(title,desc); row.append(icon,copy); return row;
+    }));
+  }
+  function spin(){
+    const button=$('play'); if(button.disabled) return;
+    button.disabled=true;
+    const result=Array.from({length:3},()=>icons[Math.floor(Math.random()*icons.length)]);
+    ['r1','r2','r3'].forEach((id,i)=>{const el=$(id);el.textContent=result[i];el.classList.add('pop');setTimeout(()=>el.classList.remove('pop'),220);});
+    state.rounds += 1;
+    const unique = new Set(result).size;
+    if(unique===1){
+      state.score += 10; state.best=Math.max(state.best,state.score);
+      if(state.unlocked<fragments.length){
+        const f=fragments[state.unlocked]; state.unlocked += 1;
+        $('status').textContent='¡Trío! +10 puntos y descubriste: '+f.title+'.';
+      } else $('status').textContent='¡Trío! +10 puntos. La colección está completa.';
+    } else if(unique===2){state.score += 2;state.best=Math.max(state.best,state.score);$('status').textContent='¡Buena ruta! +2 puntos de exploración.';}
+    else $('status').textContent='Nueva combinación. Sigue explorando Roots.';
+    draw(); persist(); button.disabled=false;
+  }
+  $('play').addEventListener('click',spin);
+  $('reset').addEventListener('click',()=>{
+    if(!window.confirm('¿Borrar el progreso guardado en este dispositivo?')) return;
+    state=fresh(); draw(); persist('Progreso reiniciado'); $('status').textContent='Progreso reiniciado. Tu aventura está lista.';
+  });
+  window.addEventListener('pagehide',()=>persist());
+  window.addEventListener('storage',event=>{if(event.key===KEY){state=fresh();load();draw();$('saveLabel').textContent='Actualizado en otra pestaña de este navegador';}});
+  load(); draw();
+  if(state.updatedAt) $('saveLabel').textContent='Progreso recuperado de este dispositivo';
+  setInterval(()=>persist('Guardado automático · '+new Date().toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit'})),60000);
+})();
+</script>
+</body>
+</html>
